@@ -19,14 +19,12 @@ import Agriculture from "./Components/Agriculture/Agriculture";
 import Construction from "./Components/Construction/Construction";
 import Interaction from "./Components/Intercation/Interaction";
 import Template from "./Components/Template/Template";
-import CustomCursor from "./Components/CustomCursor/CustomCursor";
 
 const App = () => {
   return (
     <>
       
       <BrowserRouter>
-        <CustomCursor/>
         <Routes>
           <Route path="/" element={<HomePage />} />
 
