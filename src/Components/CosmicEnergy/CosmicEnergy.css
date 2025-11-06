@@ -1,0 +1,25 @@
+.cosmic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cosmic-container img {
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+/* Responsive Part */
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  .cosmic-container{
+    flex-direction: column;
+  }
+  .cosmic-section{
+    padding: 2rem;
+  }
+   .cosmic-section h1{
+    font-size: 2.6rem;
+   }
+  .cosmic-container img{
+    margin: 1rem 0px;
+  }
+}

@@ -1,0 +1,28 @@
+.agricultureimg {
+  height: 350px;
+  border-radius: 50px;
+  margin-left: 60px;
+}
+.agri-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agri-heading-5 {
+  text-align: left !important;
+}
+/* Responsive Part */
+@media screen and (min-width: 300px) and (max-width: 900px) {
+  .agricluture-heading h1 {
+    font-size: 2.4rem;
+  }
+  .agri-container {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 1300px) {
+  .agri-section {
+    padding: 3rem 3rem;
+  }
+}

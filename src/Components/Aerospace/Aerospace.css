@@ -1,0 +1,18 @@
+.aerospace-align-text {
+  text-align: left !important;
+}
+
+/* Responsive Part */
+@media screen and (min-width: 300px) and (max-width: 1300px) {
+  .aerosspace-section {
+    padding: 2rem;
+  }
+}
+
+/* Responsive Part */
+@media screen and (min-width: 300px) and (max-width: 950px) {
+  .aerospace-colum {
+    flex-direction: column-reverse !important;
+    gap: 2rem;
+  }
+}

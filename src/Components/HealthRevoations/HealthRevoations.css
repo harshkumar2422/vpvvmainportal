@@ -1,0 +1,43 @@
+.health-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.health-container img{
+    margin: 0px 20px;
+    border-radius: 10px;
+    height: 250px;
+}
+
+
+/* Responsive Part */
+@media screen and (min-width: 300px) and (max-width: 1300px) {
+  .HealthRevoations-section {
+    padding: 2rem;
+  }
+  .construction-heading h1 {
+    font-size: 2.3rem;
+  }
+}
+/* Responsive Part */
+@media screen and (min-width: 300px) and (max-width: 950px) {
+  .health-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .health-container img{
+    margin: 1rem 0px;
+  }
+  .health-container h5,
+  .health-container p{
+    text-align: center !important;
+
+  }
+  .healthSecond-container {
+    flex-direction: column-reverse;
+  }
+  .healthcars-p-li li{
+    text-align: left !important;
+  }
+}

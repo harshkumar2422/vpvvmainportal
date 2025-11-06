@@ -1,0 +1,150 @@
+/* SECTION BACKGROUND */
+.interaction-section {
+  background: #000000;
+  background: linear-gradient(
+    1deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(5, 30, 63, 1) 61%,
+    rgba(13, 61, 120, 1) 100%
+  );
+  padding: 80px 20px;
+  color: #fff;
+  color: gol;
+  font-family: "Poppins", sans-serif;
+}
+
+/* MAIN CONTAINER */
+.interaction-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* LEFT CONTENT */
+.interaction-left {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.interaction-left h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.interaction-left h1 span {
+  color: #00b2ff;
+}
+
+/* CONTACT INFO STYLING */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+}
+
+.contact-icon {
+  font-size: 26px;
+  color: #00b2ff;
+  margin-top: 4px;
+}
+
+.contact-item h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+  text-decoration: underline;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: #dcdcdc;
+  line-height: 1.5;
+}
+
+/* GOOGLE MAP */
+.interaction-right {
+  flex: 1;
+  min-width: 350px;
+  aspect-ratio: 1 / 1; /* Keeps map square, adjusts height with content */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+.map-flex .interaction-right {
+  margin: 1rem 0px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .interaction-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .interaction-left {
+    margin-bottom: 40px;
+    align-items: center;
+  }
+
+  .interaction-left h1 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  .contact-item {
+    text-align: left;
+    width: 100%;
+  }
+
+  .interaction-right {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Landscape ratio for medium devices */
+  }
+}
+
+@media (max-width: 600px) {
+  .interaction-section {
+    padding: 60px 15px;
+  }
+
+  .interaction-left h1 {
+    font-size: 2rem;
+  }
+
+  .contact-item {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .interaction-right {
+    aspect-ratio: 4 / 3; /* Taller map on smaller devices */
+  }
+}
+

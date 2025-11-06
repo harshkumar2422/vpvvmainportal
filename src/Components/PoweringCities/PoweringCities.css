@@ -1,0 +1,25 @@
+.futuredusionimg{
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 20px;
+}
+.fusion-container{
+    display: flex;
+}
+/* Responsive Part */
+@media screen and (min-width: 300px) and (max-width: 1300px) {
+  .futureisher-section {
+    padding: 2rem;
+  }
+  .futureishereimg{
+    box-shadow: none;
+  }
+}
+/* Responsive Part */
+@media screen and (min-width: 300px) and (max-width: 1100px) {
+
+  .fusion-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

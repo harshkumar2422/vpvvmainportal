@@ -1,0 +1,8 @@
+.databaseimg-container {
+  /* border: 2px solid red; */
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,204 @@
+:root {
+  --bg-dark: #020617;
+  --bg-gradient: linear-gradient(180deg, #01040e, #041a2b 60%, #07253c);
+  --text-light: #e2e8f0;
+  --accent: #00ffe0;
+  --card-glass: rgba(255, 255, 255, 0.05);
+  --border-glow: rgba(0, 255, 224, 0.15);
+}
+
+/* wrapper */
+.ourproject-wrapper {
+  background: #000000;
+  background: linear-gradient(
+    1deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(5, 30, 63, 1) 61%,
+    rgba(13, 61, 120, 1) 100%
+  );
+  color: var(--text-light);
+  min-height: 100vh;
+  padding: 4rem 5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* glowing animated text */
+.glow-text {
+  background: linear-gradient(90deg, #00ffe0, #48b2ff, #00ffe0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: glowMove 6s infinite linear;
+}
+
+@keyframes glowMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* hero */
+.ourproject-hero h1 {
+  font-size: clamp(2rem, 3vw, 3.4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.ourproject-hero p {
+  font-size: 1.2rem;
+  color: #a0aec0;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.7;
+  opacity: 0.9;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* grid */
+.ourproject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* card */
+.ourproject-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--card-glass);
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 0 25px rgba(0, 255, 224, 0.08);
+  transition: all 0.5s ease;
+}
+
+.ourproject-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 0 40px rgba(0, 255, 224, 0.25);
+}
+
+/* image */
+.img-container {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease, filter 0.6s ease;
+  filter: brightness(0.9);
+}
+
+.ourproject-card:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* overlay */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.3rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  text-align: left;
+}
+
+.card-overlay h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 255, 224, 0.4);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* view button */
+.view-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 224, 0.4);
+}
+
+.view-btn:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* graph section */
+.ourproject-graph-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ourproject-graph-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.graph-card {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 224, 0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 224, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .ourproject-wrapper {
+    padding: 2rem;
+  }
+
+  .img-container {
+    height: 230px;
+  }
+
+  .ourproject-hero h1 {
+    font-size: 2rem;
+  }
+
+  .ourproject-hero p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,228 @@
+.township-new-section {
+  background: linear-gradient(145deg, #000000 0%, #052045 60%, #0a4a87 100%);
+  color: white;
+  text-align: center;
+  padding: 4rem 6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.township-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #00b4d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.8rem;
+}
+
+.township-header p {
+  color: #bcd2e0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.underline {
+  width: 140px;
+  height: 4px;
+  background: #00b4d8;
+  margin: 0 auto 3rem;
+  border-radius: 4px;
+}
+
+/* Image Section */
+.township-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  flex: 1;
+  min-width: 400px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+  filter: brightness(85%);
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Details Section */
+.township-details {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.township-details h2 {
+  text-align: center;
+  color: #cfe8fa;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.township-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.township-details li {
+  font-size: 1.1rem;
+  line-height: 2.3rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  color: #e4ebf2;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.township-details li:hover {
+  color: #00b4d8;
+  transform: translateX(5px);
+}
+
+.icon {
+  margin-right: 10px;
+  color: #00b4d8;
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .township-new-section {
+    padding: 3rem 3rem;
+  }
+
+  .gallery-item {
+    min-width: 100%;
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .township-new-section {
+    padding: 2rem;
+  }
+
+  .township-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .township-details {
+    padding: 1.5rem;
+  }
+
+  .township-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .township-details li {
+    font-size: 1rem;
+  }
+}
+
+.township-container {
+  padding: 3rem 5%;
+  text-align: center;
+  background: #000000;
+  background: linear-gradient(
+    1deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(5, 30, 63, 1) 61%,
+    rgba(13, 61, 120, 1) 100%
+  );
+}
+
+.township-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.township-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.township-images img {
+  width: 48%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.township-subtitle {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Grid layout for 3x3 structure */
+.township-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.township-item {
+  background: #fff;
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: none;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  .township-images {
+    flex-direction: column;
+  }
+
+  .township-images img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .township-grid {
+    grid-template-columns: 1fr;
+  }
+}

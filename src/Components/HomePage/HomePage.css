@@ -1,0 +1,541 @@
+body {
+  overflow-x: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(5, 30, 63, 1) 61%,
+    rgba(13, 61, 120, 1) 100%
+  );
+}
+
+.hero-section {
+  background: linear-gradient(
+    1deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(5, 30, 63, 1) 61%,
+    rgba(13, 61, 120, 1) 100%
+  );
+  color: white;
+  text-align: center;
+  padding: 3rem 10.3rem;
+}
+
+.hero-content h1 {
+  font-size: 4.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 2rem;
+  /* margin-bottom: 2rem; */
+  color: #c9d1d9;
+}
+
+/* 2 */
+/* Container for the entire section */
+.logo-section {
+  background-color: #000;
+}
+
+.logo-container {
+  padding: 1.9rem 0px;
+  margin: 0px 50px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  overflow-x: hidden;
+}
+
+.logo-container .marqueescroll img {
+  margin: 0px 50px;
+  width: auto;
+  height: 40px;
+}
+
+/* 3 */
+/* Main container */
+.fixes-section {
+  background: linear-gradient(135deg, #0d1117, #1a1e29);
+  color: white;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flex container for text and card */
+.content-container {
+  display: flex;
+  /* max-width: 1200px; */
+  width: 100%;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Left column: Text content */
+.text-content {
+  flex: 1;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  /* padding-right: 200px; */
+}
+
+.text-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #9aa0a6;
+}
+.text-content p span {
+  color: #fff;
+}
+.link-box {
+  display: inline-block;
+  border-bottom: 1px solid #fff;
+  padding: 5px 0px;
+  max-width: fit-content;
+  width: 0px;
+  text-wrap: nowrap;
+  transition: all 0.2s linear;
+}
+.link-box:hover {
+  width: 100%;
+}
+.explore-link {
+  font-size: 1rem;
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+/* Right column: Card content */
+.card-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.cardPhoto {
+  /* background: #1a1e29; */
+  /* padding: 1.5rem; */
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); */
+  /* min-height: fit-content; */
+  border: transparent;
+  /* width: 100%; */
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 450px; */
+  border-radius: 10px !important;
+}
+.cardPhoto img {
+  height: auto;
+  width: 80%;
+}
+
+/* skndks */
+.accordion {
+  width: 100%;
+}
+
+.stick {
+  border: 1px solid red;
+  width: 50px;
+  cursor: pointer;
+  background-color: rgb(238, 0, 255);
+  text-align: center;
+  height: 50px;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+}
+.accordion-item {
+  background: transparent;
+  border: none;
+  /* border-bottom: 1px solid #fff; */
+}
+.accordion-button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: transparent !important;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid #fff;
+}
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  outline: none;
+  box-shadow: none;
+}
+.accordion-body {
+  color: #c9d1d9;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 2rem;
+  background: transparent !important;
+  padding: 10px 20px;
+  /* border-bottom: none; */
+}
+.accordion {
+  background: transparent;
+  --bs-accordion-btn-focus-box-shadow: none !important;
+}
+.accordion-button:not(.collapsed)::after {
+  color: #fff !important;
+}
+
+/* Ending SignUp  */
+
+.carousel-wrapper {
+  width: 100%;
+  max-height: 550px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.carousel-img {
+  height: 550px;
+  object-fit: cover;
+}
+.carousel-item {
+  display: flex;
+  /* flex-direction: column; */
+}
+.carousel-caption h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+
+/* Make carousel image cover entire section and reduce brightness */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen height */
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+  height: 100vh;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%); /* darkens the image */
+  opacity: 0.9; /* controls transparency (lower = dimmer) */
+}
+
+/* Overlay for extra readability (optional but recommended) */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* dark overlay */
+  z-index: 1;
+}
+
+/* Bring text above everything */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.carousel-caption h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff !important;
+}
+
+.carousel-caption p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ddd !important;
+}
+
+/* Optional: smooth fade for slide transition */
+.carousel-item img {
+  transition: transform 5s ease, filter 2s ease;
+}
+.carousel-item.active img {
+  transform: scale(1.05); /* slow zoom effect */
+}
+
+/* ✅ Center carousel arrows properly */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%; /* optional: adjust arrow width area */
+  z-index: 3;
+}
+
+/* ✅ Make arrow icons larger and visible */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 50px;
+  height: 50px;
+  background-size: 100%, 100%;
+  filter: brightness(0) invert(1); /* makes white icons visible on dark bg */
+  opacity: 0.8; /* adjust to make arrow icons more or less visible */
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  opacity: 1;
+}
+
+/* ✅ Optional: overall opacity control for carousel images */
+.carousel-img {
+  opacity: var(--carousel-opacity, 0.85); /* default 0.85 */
+  filter: brightness(85%);
+  transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+/* If you want arrows always visible on hover only */
+.carousel:hover .carousel-control-prev-icon,
+.carousel:hover .carousel-control-next-icon {
+  opacity: 1;
+}
+
+/* Responsive Part */
+@media screen and (min-width: 300px) and (max-width: 1100px) {
+  .hero-section {
+    color: white;
+    text-align: center;
+    padding: 1.2rem 2.3rem;
+  }
+  .hero-content h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .carousel-caption.top-left h3 {
+    font-size: 2.8rem !important;
+  }
+  .hero-content p {
+    line-height: 2rem;
+    font-weight: 900 !important;
+    /* color: goldenrod !important; */
+
+    /* margin-bottom: 2rem; */
+    /* color: #c9d1d9; */
+  }
+  .content-container {
+    flex-direction: column;
+  }
+  .homepage-section-content {
+    flex-direction: column-reverse !important;
+  }
+  .text-content span {
+    font-size: 36px !important;
+  }
+  .fixes-section {
+    padding: 2rem 3rem;
+  }
+  .homepage-container {
+    overflow: hidden;
+  }
+}
+
+/* Position carousel text on top-left side */
+.carousel-caption.top-left {
+  top: 10%;
+  left: 7%;
+  transform: none;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.carousel-caption.top-left h3 {
+  font-size: 4.8rem;
+  font-weight: 900;
+  /* color: #fff !important; */
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption.top-left p {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #ddd !important;
+  /* max-width: 300px; */
+}
+
+/* Template splash wrapper always on top initially */
+/* Splash wrapper (no change) */
+.temp-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(5, 30, 63, 1) 61%,
+    rgba(13, 61, 120, 1) 100%
+  );
+  justify-content: center;
+  align-items: center;
+}
+
+.future-text {
+  display: inline-block;
+  font-size: 1.9rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 20px !important;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.6s ease forwards;
+  animation-delay: var(--delay);
+  background: linear-gradient(
+    120deg,
+    goldenrod 0%,
+    goldenrod 30%,
+    #383734 50%,
+    goldenrod 70%,
+    goldenrod 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite, slideIn 0.6s ease forwards;
+}
+
+/* Delay each letter for entrance */
+.future-text:nth-child(1) {
+  animation-delay: 0.1s, 0.1s;
+}
+.future-text:nth-child(2) {
+  animation-delay: 0.3s, 0.3s;
+}
+.future-text:nth-child(3) {
+  animation-delay: 0.5s, 0.5s;
+}
+.future-text:nth-child(4) {
+  animation-delay: 0.7s, 0.7s;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shiny animation inside the text */
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* ===== Updated Card Photo Section ===== */
+.cardPhoto {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 10; /* maintains consistent shape */
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b0e15;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.cardPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures image fills area nicely */
+  border-radius: 12px;
+  transition: transform 0.6s ease;
+}
+
+.cardPhoto img:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Responsive Scaling */
+@media (max-width: 1100px) {
+  .cardPhoto {
+    max-width: 90%;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 700px) {
+  .cardPhoto {
+    max-width: 95%;
+    aspect-ratio: 4 / 3;
+  }
+  .future-text {
+    letter-spacing: 6px !important;
+    line-height: 70px !important;
+  }
+}
+
+/* ===== Floating Scroll Button ===== */
+.scroll-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+  color: white;
+  background: transparent !important;
+  border: 2px solid #fff;
+  /* filter: blur(10px); */
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #0a84ff, #1e90ff);
+}
+
+/* Mobile-friendly */
+@media (max-width: 768px) {
+  .scroll-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    bottom: 25px;
+    right: 25px;
+  }
+}
