@@ -3,27 +3,17 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "./OfficeTeam.css";
 
-import Officeteamimg1 from "../HomeImg/Officeteamimg1.jpeg";
-import Officeteamimg2 from "../HomeImg/Officeteamimg2.jpeg";
-import Officeteamimg3 from "../HomeImg/Officeteamimg3.jpeg";
-import Officeteamimg4 from "../HomeImg/Officeteamimg4.jpeg";
-import Officeteamimg5 from "../HomeImg/Officeteamimg5.jpeg";
-import Officeteamimg6 from "../HomeImg/Officeteamimg6.jpeg";
-import Officeteamimg7 from "../HomeImg/Officeteamimg7.jpeg";
-import Officeteamimg8 from "../HomeImg/Officeteamimg8.jpeg";
-import Officeteamimg9 from "../HomeImg/Officeteamimg9.jpeg";
-
 const OfficeTeam = () => {
   const images = [
-    Officeteamimg1,
-    Officeteamimg2,
-    Officeteamimg3,
-    Officeteamimg4,
-    Officeteamimg5,
-    Officeteamimg6,
-    Officeteamimg7,
-    Officeteamimg8,
-    Officeteamimg9,
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490338/Officeteamimg1_tpntdm.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg3_qbrb9r.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg2_ofsiwu.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg7_mnr0q4.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490340/Officeteamimg9_axzrac.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg6_wjs18m.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg8_fx1bs9.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490340/Officeteamimg5_grc9yf.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490340/Officeteamimg4_nhzio1.jpg",
   ];
 
   return (
