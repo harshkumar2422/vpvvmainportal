@@ -17,8 +17,15 @@ const Futureishere = () => {
             technologies. The domains/ verticals in the horizon are:
           </p>
           <br />
-                  <div className="siding futureisher-content" style={{ display: "flex" }}>
-                       <img src="https://res.cloudinary.com/dttqciolc/image/upload/v1762246253/futureishereimg_xxamzy.png" alt="" className="futureishereimg" />
+          <div
+            className="siding futureisher-content"
+            style={{ display: "flex" }}
+          >
+            <img
+              src="https://res.cloudinary.com/dttqciolc/image/upload/v1762246253/futureishereimg_xxamzy.png"
+              alt=""
+              className="futureishereimg"
+            />
             <p className="futureimg-container">
               <ul>
                 <li>Aerospace Innovations</li>
@@ -33,7 +40,6 @@ const Futureishere = () => {
                 <li>Underwater Civilizations & Military Bases</li>
               </ul>
             </p>
-           
           </div>
         </div>
       </section>

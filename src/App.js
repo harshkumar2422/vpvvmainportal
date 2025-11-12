@@ -2,6 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify"; // ✅ added
+import "react-toastify/dist/ReactToastify.css"; // ✅ added
+
 import HomePage from "./Components/HomePage/HomePage";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import OurProject from "./Components/OurProject/OurProject";
@@ -18,14 +21,21 @@ import Aerospace from "./Components/Aerospace/Aerospace";
 import Agriculture from "./Components/Agriculture/Agriculture";
 import Construction from "./Components/Construction/Construction";
 import Interaction from "./Components/Intercation/Interaction";
-import Template from "./Components/Template/Template";
+import WhispersOfThePast from "./Components/WhispersOfThePast/WhispersOfThePast";
+import NewsRoom from "./Components/NewsRoom/NewsRoom";
+import NewsUploadForm from "./Components/NewsUploadForm/NewsUploadForm";
+import LoginPage from "./Components/LoginPage/LoginPage";
+// import Maintenancepage from "./Components/MaintenancePage/Maintenancepage";
+
+
+export const server = "https://vpvvindiabackend-com.onrender.com/api/v1"
 
 const App = () => {
   return (
     <>
-      
       <BrowserRouter>
         <Routes>
+          {/* <Route path="/" element={<Maintenancepage />} /> */}
           <Route path="/" element={<HomePage />} />
 
           <Route path="/about-us" element={<AboutUs />} />
@@ -40,15 +50,31 @@ const App = () => {
           <Route path="/office-team" element={<OfficeTeam />} />
           <Route path="/futureishere" element={<Futureishere />} />
           <Route path="/power-cities" element={<PoweringCities />} />
-          <Route path="/healthcares-revolution" element={<HealthRevoations />} />
+          <Route
+            path="/healthcares-revolution"
+            element={<HealthRevoations />}
+          />
           <Route path="/cosmic-energy" element={<CosmicEnergy />} />
           <Route path="/aerospace" element={<Aerospace />} />
           <Route path="/agriculture" element={<Agriculture />} />
           <Route path="/construction" element={<Construction />} />
           <Route path="/interaction" element={<Interaction />} />
-          <Route path="/template" element={<Template />} />
+          <Route path="/whispers-of-the-past" element={<WhispersOfThePast />} />
+          <Route path="/newsroom" element={<NewsRoom />} />
+          <Route path="/upload-news" element={<NewsUploadForm />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
     </>
   );
 };

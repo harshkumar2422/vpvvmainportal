@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 // 1
-import logo from "../HomeImg/logo-vpvv.png";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
@@ -25,8 +24,8 @@ const Header = () => {
               <Navbar.Brand href="/">
                 <Link to="/ " className="text-light logo">
                   <img
-                    alt=""
-                    src={logo}
+                    alt="VPVV-LOGO"
+                    src="https://res.cloudinary.com/dttqciolc/image/upload/v1762494318/logo-vpvv-enhance_deivee.png"
                     width="90"
                     height="90"
                     // className="d-inline-block align-top"
@@ -45,16 +44,15 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link className="">
-                <Link to="/about-us">About Us</Link>
-              </Nav.Link>
-              <Nav.Link className="">
-                <Link to="/our-project">Our Project</Link>
-              </Nav.Link>
               {/* <Nav.Link className="">
-                <Link to="/gallary">Illustration</Link>
+                <Link to="/about-us">About Us</Link>
               </Nav.Link> */}
-              <NavDropdown title="Illustration" id="collapsible-nav-dropdown">
+              <NavDropdown title="About Us" id="collapsible-nav-dropdown">
+                <Link to="/about-us">
+                  <NavDropdown.Item href="/about-us">
+                  About Us
+                  </NavDropdown.Item>
+                </Link>
                 <Link to="/management-team">
                   <NavDropdown.Item href="/management-team">
                     Management Team
@@ -66,6 +64,22 @@ const Header = () => {
                   </NavDropdown.Item>
                 </Link>
               </NavDropdown>
+              <Nav.Link className="">
+                <Link to="/our-project">Our Project</Link>
+              </Nav.Link>
+              {/* <NavDropdown title="Illustration" id="collapsible-nav-dropdown">
+                <Link to="/management-team">
+                  <NavDropdown.Item href="/management-team">
+                    Management Team
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/office-team">
+                  <NavDropdown.Item href="/office-team">
+                    Office Team
+                  </NavDropdown.Item>
+                </Link>
+              </NavDropdown> */}
+
               {/* 3 */}
               <NavDropdown title="Project Site" id="collapsible-nav-dropdown">
                 <Link to="/proposed">
@@ -84,16 +98,21 @@ const Header = () => {
                   </NavDropdown.Item>
                 </Link>
               </NavDropdown>
-
+              <Nav.Link className="">
+                <Link to="/whispers-of-the-past">Whispers of the Past</Link>
+              </Nav.Link>
+              <Nav.Link className="">
+                <Link to="/newsroom">Newsroom</Link>
+              </Nav.Link>
               <Nav.Link className="">
                 <Link to="/interaction">Interaction</Link>
               </Nav.Link>
             </Nav>
-          <div className="btn visiting-btn">
-            <Button variant="outline-light" onClick={goVpvv}>
-              Visit VPVV Portal
-            </Button>
-          </div>
+            <div className="btn visiting-btn">
+              <Button variant="outline-light" onClick={goVpvv}>
+                Visit VPVV Portal
+              </Button>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

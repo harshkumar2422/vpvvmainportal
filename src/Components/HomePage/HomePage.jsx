@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./HomePage.css";
 import Carousel from "react-bootstrap/Carousel";
-import HomePagePhoto1 from "../HomeImg/contructionimage.png";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Template from "../Template/Template";
@@ -11,7 +10,6 @@ import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 const HomePage = () => {
   const [showTemp, setShowTemp] = useState(true);
   const [isBottom, setIsBottom] = useState(false);
-
 
   useEffect(() => {
     const timer = setTimeout(() => setShowTemp(false), 8000);
@@ -121,7 +119,7 @@ const HomePage = () => {
         {/* ===== Hero Section ===== */}
         <section className="hero-section">
           <div className="hero-content">
-            <h1>Fostering Sustainable Growth For a Futuristic India</h1>
+            <h1>Fostering Sustainable Growth For A Futuristic India</h1>
             <p className="future-text">Future is Here</p>
           </div>
         </section>
@@ -285,7 +283,10 @@ const HomePage = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               <div className="cardPhoto">
-                <img src="https://res.cloudinary.com/dttqciolc/image/upload/v1762247020/setalightimg_khuurv.webp" alt="Satellite" />
+                <img
+                  src="https://res.cloudinary.com/dttqciolc/image/upload/v1762247020/setalightimg_khuurv.webp"
+                  alt="Satellite"
+                />
               </div>
             </motion.div>
 
@@ -343,7 +344,10 @@ const HomePage = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               <div className="cardPhoto">
-                <img src="https://res.cloudinary.com/dttqciolc/image/upload/v1762247035/HomePagePhoto5_nmh7e2.png" alt="Tech Satellite" />
+                <img
+                  src="https://res.cloudinary.com/dttqciolc/image/upload/v1762247035/HomePagePhoto5_nmh7e2.png"
+                  alt="Tech Satellite"
+                />
               </div>
             </motion.div>
           </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import agricultureimg from "../HomeImg/agricultureimg.png";
 import "./Agriculture.css";
 
 const Agriculture = () => {
@@ -45,7 +44,7 @@ const Agriculture = () => {
                 </ul>
               </p>
             </div>
-            <img src={agricultureimg} alt="" className="agricultureimg" />
+            <img src="https://res.cloudinary.com/dttqciolc/image/upload/v1762493993/agricultureimg_xzjzmt.png" alt="" className="agricultureimg" />
           </div>
         </div>
       </section>
