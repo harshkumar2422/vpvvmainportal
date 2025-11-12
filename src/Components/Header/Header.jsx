@@ -98,9 +98,9 @@ const Header = () => {
                   </NavDropdown.Item>
                 </Link>
               </NavDropdown>
-              <Nav.Link className="">
+              {/* <Nav.Link className="">
                 <Link to="/whispers-of-the-past">Whispers of the Past</Link>
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link className="">
                 <Link to="/newsroom">Newsroom</Link>
               </Nav.Link>
