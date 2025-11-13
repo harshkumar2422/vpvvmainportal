@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify"; // ✅ added
-import "react-toastify/dist/ReactToastify.css"; // ✅ added
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import HomePage from "./Components/HomePage/HomePage";
 import AboutUs from "./Components/AboutUs/AboutUs";
@@ -25,19 +25,28 @@ import WhispersOfThePast from "./Components/WhispersOfThePast/WhispersOfThePast"
 import NewsRoom from "./Components/NewsRoom/NewsRoom";
 import NewsUploadForm from "./Components/NewsUploadForm/NewsUploadForm";
 import LoginPage from "./Components/LoginPage/LoginPage";
-// import Maintenancepage from "./Components/MaintenancePage/Maintenancepage";
 
-
-export const server = "https://vpvvindiabackend-com.onrender.com/api/v1"
+export const server = "https://vpvvindiabackend-com.onrender.com/api/v1";
 
 const App = () => {
+  // ✅ Inline ProtectedRoute component
+  const ProtectedRoute = ({ children }) => {
+    const token = localStorage.getItem("token"); // or use sessionStorage if you prefer
+
+    if (!token) {
+      // If no token, redirect to login
+      return <Navigate to="/login" replace />;
+    }
+
+    // If logged in, show the protected component
+    return children;
+  };
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<Maintenancepage />} /> */}
           <Route path="/" element={<HomePage />} />
-
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/our-project" element={<OurProject />} />
           <Route
@@ -61,10 +70,22 @@ const App = () => {
           <Route path="/interaction" element={<Interaction />} />
           <Route path="/whispers-of-the-past" element={<WhispersOfThePast />} />
           <Route path="/newsroom" element={<NewsRoom />} />
-          <Route path="/upload-news" element={<NewsUploadForm />} />
+
+          {/* ✅ Protected route for upload-news */}
+          <Route
+            path="/upload-news"
+            element={
+              <ProtectedRoute>
+                <NewsUploadForm />
+              </ProtectedRoute>
+            }
+          />
+
           <Route path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
+
+      {/* ✅ Toast Notification Container */}
       <ToastContainer
         position="top-right"
         autoClose={3000}
