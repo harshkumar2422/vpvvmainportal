@@ -18,22 +18,32 @@ const NewsUploadForm = () => {
   const [descKey, setDescKey] = useState("");
   const [linkKey, setLinkKey] = useState("");
   const [fileKey, setFileKey] = useState(null);
+  const [newsDateKey, setnewsDateKey] = useState("");
 
   const [taglineReg, setTaglineReg] = useState("");
   const [descReg, setDescReg] = useState("");
   const [linkReg, setLinkReg] = useState("");
   const [fileReg, setFileReg] = useState(null);
+  const [newsDateReg, setnewsDateReg] = useState("");
 
   const [loading, setLoading] = useState(false);
 
   // ✅ Axios version of postNews
-  const postNews = async ({ headline, paragraph, link, file, type }) => {
+  const postNews = async ({
+    headline,
+    paragraph,
+    link,
+    file,
+    type,
+    newsDate,
+  }) => {
     const url = `${server}/createnews`;
     const data = new FormData();
     data.append("headline", headline);
     data.append("paragraph", paragraph);
     data.append("link", link);
     data.append("type", type);
+    data.append("newsDate", newsDate);
     if (file) data.append("file", file);
 
     const token = localStorage.getItem("token");
@@ -48,8 +58,8 @@ const NewsUploadForm = () => {
       });
 
       const json = res.data;
-      console.log("C",res);
-      
+      console.log("C", res);
+
       if (res.status === 201 && json.success) {
         toast.success(json.messgae || `${type} News created Successfully`);
         return { ok: true, json };
@@ -69,7 +79,7 @@ const NewsUploadForm = () => {
 
   const handleSubmitKey = async (e) => {
     e.preventDefault();
-    if (!taglineKey || !descKey || !linkKey) {
+    if (!taglineKey || !descKey || !linkKey || !newsDateKey) {
       alert("Please Enter All details");
       return;
     }
@@ -78,19 +88,21 @@ const NewsUploadForm = () => {
       paragraph: descKey,
       link: linkKey,
       file: fileKey,
+      newsDate: newsDateKey,
       type: "highlight",
     });
     setTaglineKey("");
     setDescKey("");
     setLinkKey("");
     setFileKey(null);
+    setnewsDateKey("");
     const input = document.getElementById("key-file-input");
     if (input) input.value = "";
   };
 
   const handleSubmitRegular = async (e) => {
     e.preventDefault();
-    if (!taglineReg || !descReg || !linkReg) {
+    if (!taglineReg || !descReg || !linkReg || !newsDateReg) {
       alert("Please Enter All details");
       return;
     }
@@ -99,12 +111,14 @@ const NewsUploadForm = () => {
       paragraph: descReg,
       link: linkReg,
       file: fileReg,
+      newsDate: newsDateReg,
       type: "regular",
     });
     setTaglineReg("");
     setDescReg("");
     setLinkReg("");
     setFileReg(null);
+    setnewsDateReg("");
     const input = document.getElementById("reg-file-input");
     if (input) input.value = "";
   };
@@ -153,32 +167,38 @@ const NewsUploadForm = () => {
               <Form onSubmit={handleSubmitKey}>
                 <Row className="mb-3">
                   <Form.Group as={Col}>
-                    <Form.Label>Tagline</Form.Label>
+                    <Form.Label>Enter Tagline</Form.Label>
                     <Form.Control
                       type="text"
                       value={taglineKey}
+                      placeholder="Enter tagline"
                       onChange={(e) => setTaglineKey(e.target.value)}
+                      required
                     />
                   </Form.Group>
                 </Row>
                 <Row className="mb-3">
                   <Form.Group as={Col}>
-                    <Form.Label>Description</Form.Label>
+                    <Form.Label>Enter Description</Form.Label>
                     <Form.Control
                       as="textarea"
                       rows={3}
+                      placeholder="Enter description"
                       value={descKey}
                       onChange={(e) => setDescKey(e.target.value)}
+                      required
                     />
                   </Form.Group>
                 </Row>
                 <Row className="mb-3">
                   <Form.Group as={Col}>
-                    <Form.Label>Link</Form.Label>
+                    <Form.Label>Enter Link</Form.Label>
                     <Form.Control
                       type="text"
+                      placeholder="https://www.news.com"
                       value={linkKey}
                       onChange={(e) => setLinkKey(e.target.value)}
+                      required
                     />
                   </Form.Group>
                 </Row>
@@ -189,6 +209,18 @@ const NewsUploadForm = () => {
                       id="key-file-input"
                       type="file"
                       onChange={(e) => setFileKey(e.target.files[0])}
+                      required
+                    />
+                  </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                  <Form.Group as={Col}>
+                    <Form.Label>News Date</Form.Label>
+                    <Form.Control
+                      type="date"
+                      value={newsDateKey}
+                      onChange={(e) => setnewsDateKey(e.target.value)}
+                      required
                     />
                   </Form.Group>
                 </Row>
@@ -220,32 +252,38 @@ const NewsUploadForm = () => {
               <Form onSubmit={handleSubmitRegular}>
                 <Row className="mb-3">
                   <Form.Group as={Col}>
-                    <Form.Label>Tagline</Form.Label>
+                    <Form.Label>Enter Tagline</Form.Label>
                     <Form.Control
                       type="text"
+                      placeholder="Enter tagline"
                       value={taglineReg}
                       onChange={(e) => setTaglineReg(e.target.value)}
+                      required
                     />
                   </Form.Group>
                 </Row>
                 <Row className="mb-3">
                   <Form.Group as={Col}>
-                    <Form.Label>Description</Form.Label>
+                    <Form.Label>Enter Description</Form.Label>
                     <Form.Control
                       as="textarea"
+                      placeholder="Enter description"
                       rows={3}
                       value={descReg}
                       onChange={(e) => setDescReg(e.target.value)}
+                      required
                     />
                   </Form.Group>
                 </Row>
                 <Row className="mb-3">
                   <Form.Group as={Col}>
-                    <Form.Label>Link</Form.Label>
+                    <Form.Label>Enter Link</Form.Label>
                     <Form.Control
+                      placeholder="https://www.news.com"
                       type="text"
                       value={linkReg}
                       onChange={(e) => setLinkReg(e.target.value)}
+                      required
                     />
                   </Form.Group>
                 </Row>
@@ -256,6 +294,18 @@ const NewsUploadForm = () => {
                       id="reg-file-input"
                       type="file"
                       onChange={(e) => setFileReg(e.target.files[0])}
+                      required
+                    />
+                  </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                  <Form.Group as={Col}>
+                    <Form.Label>News Date</Form.Label>
+                    <Form.Control
+                      type="date"
+                      value={newsDateReg}
+                      onChange={(e) => setnewsDateReg(e.target.value)}
+                      required
                     />
                   </Form.Group>
                 </Row>
