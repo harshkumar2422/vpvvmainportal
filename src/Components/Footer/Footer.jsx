@@ -40,8 +40,8 @@ const Footer = () => {
             <FaMapMarkerAlt className="footer-icon" />{" "}
             <strong>Regional Address:</strong>
             <br />
-            Hamdan Center,Block No.18, Attipra Village S.N. Nagar, Poundkadavu
-            Ward, Thiruvananthapuram, Kerala, India - 695583
+            Hamdan Center, NH 47 Bypass Road, S.N. Nagar, Kulathoor,
+            Kazhakootam, Thiruvananthapuram, Kerala - 695583
           </p>
         </div>
 
