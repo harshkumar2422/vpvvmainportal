@@ -15,14 +15,14 @@ const AboutUs = () => {
           <hr />
           <p>
             <b>The VPVV</b> is a Special Purpose Vehicle, which has secured a
-            Work Order from the <b>United States of America</b>, to perform &nbsp;
+            Work Order from the <b>United States of America</b>, to perform
+            &nbsp;
             <b>
-            
               Land Acquisition, Land Clearance, Infrastructure Development and
               Maintenance of Infrastructure
             </b>
-             &nbsp; during the Operational phase. The project is <b>“CLASSIFIED”</b> in
-            nature.
+            &nbsp; during the Operational phase. The project is{" "}
+            <b>“CLASSIFIED”</b> in nature.
           </p>
           <br />
           <p>
@@ -67,9 +67,9 @@ const AboutUs = () => {
           <br />
           <p>
             VPVV Techno Construction is recognized as the “Principal Developer”
-            by the Federal Government of United States of America and the
+            by the Federal Government of the United States of America and the
             Department of Defense (DOD), spanning Indian territory, as well as
-            upto the Asian continent.
+            up to the Asian continent.
           </p>
         </div>
       </section>
