@@ -1,7 +1,13 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -46,23 +52,23 @@ const App = () => {
   };
 
   const AnalyticsTracker = () => {
-  const location = useLocation();
+    const location = useLocation();
 
-  useEffect(() => {
-    if (window.gtag) {
-      window.gtag("config", "G-9Q5M2WP6RT", {
-        page_path: location.pathname + location.search,
-      });
-    }
-  }, [location]);
+    useEffect(() => {
+      if (window.gtag) {
+        window.gtag("config", "G-9Q5M2WP6RT", {
+          page_path: location.pathname + location.search,
+        });
+      }
+    }, [location]);
 
-  return null;
-};
+    return null;
+  };
 
   return (
     <>
       <BrowserRouter>
-        <AnalyticsTracker/>
+        <AnalyticsTracker />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUs />} />
