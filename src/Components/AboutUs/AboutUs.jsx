@@ -51,14 +51,14 @@ const AboutUs = () => {
           <p>
             {" "}
             India is the most populous country on the planet, with over 65% of
-            its population between the age of 15 and 59, which gives the country
+            its population between the ages of 15 and 59, which gives the country
             a significant edge when it comes to skill development and workforce
             deployment in critical manufacturing sector.
           </p>
           <br />
           <p>
             {" "}
-            India, ahead of the centenary year, 2047, believes it can be a $ 40
+            India, ahead of the centenary year, 2047, believes it can be a $40
             Trillion economy, thus boosting the infrastructure setup in the
             country as well as providing quality jobs to the massive workable
             population (#1 in the world) is the primary goal of the nation for

@@ -99,7 +99,7 @@ const NewsRoom = () => {
                   {current.small.map((item, i) => (
                     <div className="news-card" key={i}>
                       <img src={item.Image?.url} alt="News" />
-                      <div className="card-overlay">
+                      <div className="news-card-overlay">
                         <h3>{item.Headline}</h3>
                         <p>{truncateText(item.Paragraph, 10)}</p>
                         <Link target="_blank" to={item.Link || "#"}>
@@ -140,7 +140,7 @@ const NewsRoom = () => {
                 regularNews.map((item, i) => (
                   <div className="news-card" key={i}>
                     <img src={item.Image?.url} alt={item.Headline} />
-                    <div className="card-overlay">
+                    <div className="news-card-overlay">
                       <h3>{item.Headline}</h3>
                       <p>{truncateText(item.Paragraph, 15)}</p>
                       <Link target="_blank" to={item.Link || "#"}>

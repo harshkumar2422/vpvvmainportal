@@ -133,9 +133,7 @@
   text-shadow: 0 0 8px rgba(0, 255, 224, 0.4);
   animation: fadeUp 1.2s ease forwards;
 }
-.card-overlay a {
-  display: inline-block !important;
-}
+
 
 @keyframes fadeUp {
   from {

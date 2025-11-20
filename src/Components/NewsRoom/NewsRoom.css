@@ -97,7 +97,7 @@
   font-size: 15px;
 }
 
-.card-overlay a,
+.news-card-overlay a,
 .icons a {
   color: #fff !important;
   font-weight: bold;
@@ -105,7 +105,7 @@
 }
 
 .icons a:hover,
-.card-overlay a:hover {
+.news-card-overlay a:hover {
   color: blueviolet !important;
 }
 
@@ -136,7 +136,7 @@
   filter: brightness(60%);
 }
 
-.card-overlay {
+.news-card-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -146,30 +146,30 @@
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
 }
 
-.card-overlay h3 {
+.news-card-overlay h3 {
   margin: 5px 0;
   font-size: 20px;
 }
 
 /* Hide p and link initially (no space) */
-.card-overlay p,
-.card-overlay a {
+.news-card-overlay p,
+.news-card-overlay a {
   display: none;
 }
 
 /* Reveal on hover with animation */
-.news-card:hover .card-overlay p,
-.news-card:hover .card-overlay a {
+.news-card:hover .news-card-overlay p,
+.news-card:hover .news-card-overlay a {
   display: block;
   animation: fadeUp 0.5s ease forwards;
 }
 
-.card-overlay p {
+.news-card-overlay p {
   font-size: 14px;
   margin: 20px 0px;
 }
 
-.card-overlay a {
+.news-card-overlay a {
   color: #fff;
   text-decoration: none;
   font-size: 13px;
