@@ -1,7 +1,7 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -25,6 +25,9 @@ import WhispersOfThePast from "./Components/WhispersOfThePast/WhispersOfThePast"
 import NewsRoom from "./Components/NewsRoom/NewsRoom";
 import NewsUploadForm from "./Components/NewsUploadForm/NewsUploadForm";
 import LoginPage from "./Components/LoginPage/LoginPage";
+import AdminAllNews from "./Components/AdminAllNews/AdminAllNews";
+import AdminKeyHighlightsNews from "./Components/AdminKeyHighlightsNews/AdminKeyHighlightsNews";
+import AdminRegularNews from "./Components/AdminRegularNews/AdminRegularNews";
 
 export const server = "https://vpvvindiabackend-com.onrender.com/api/v1";
 
@@ -42,9 +45,24 @@ const App = () => {
     return children;
   };
 
+  const AnalyticsTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag("config", "G-9Q5M2WP6RT", {
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
+
+  return null;
+};
+
   return (
     <>
       <BrowserRouter>
+        <AnalyticsTracker/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUs />} />
@@ -70,6 +88,12 @@ const App = () => {
           <Route path="/interaction" element={<Interaction />} />
           <Route path="/whispers-of-the-past" element={<WhispersOfThePast />} />
           <Route path="/newsroom" element={<NewsRoom />} />
+          <Route path="/admin-all-news" element={<AdminAllNews />} />
+          <Route
+            path="/admin-key-highlights-news"
+            element={<AdminKeyHighlightsNews />}
+          />
+          <Route path="/admin-regular-news" element={<AdminRegularNews />} />
 
           {/* ✅ Protected route for upload-news */}
           <Route

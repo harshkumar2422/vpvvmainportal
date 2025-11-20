@@ -1,0 +1,42 @@
+.admin-news-main-container {
+  display: flex;
+}
+
+.admin-news-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+.admin-news-container .adminnews-card {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-news-container .card {
+  height: fit-content !important;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Highlight selected card */
+.news-card.selected {
+  border: 3px solid #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #fff;
+  transform: scale(1.02);
+}
+
+/* Button spacing */
+.action-buttons {
+  margin-bottom: 30px;
+}
+
+.action-buttons button {
+  margin: 0px 10px;
+}
