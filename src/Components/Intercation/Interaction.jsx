@@ -43,7 +43,7 @@ const Interaction = () => {
                 <div>
                   <h3>Regional Office Address</h3>
                   <p>
-                    Hamdan Center, NH 47 Bypass Road, S.N. Nagar, Kulathoor,
+                    Hamdan Centre, NH 47 Bypass Road, S.N. Nagar, Kulathoor,
                     Kazhakootam, Thiruvananthapuram, Kerala - 695583
                   </p>
                 </div>

@@ -40,7 +40,7 @@ const Footer = () => {
             <FaMapMarkerAlt className="footer-icon" />{" "}
             <strong>Regional Address:</strong>
             <br />
-            Hamdan Center, NH 47 Bypass Road, S.N. Nagar, Kulathoor,
+            Hamdan Centre, NH 47 Bypass Road, S.N. Nagar, Kulathoor,
             Kazhakootam, Thiruvananthapuram, Kerala - 695583
           </p>
         </div>
