@@ -15,12 +15,13 @@ const AboutUs = () => {
           <hr />
           <p>
             <b>The VPVV</b> is a Special Purpose Vehicle, which has secured a
-            Work Order from the <b>United States of America</b>, to perform
+            Work Order from the <b>United States of America</b>, to perform &nbsp;
             <b>
+            
               Land Acquisition, Land Clearance, Infrastructure Development and
               Maintenance of Infrastructure
             </b>
-            during the Operational phase. The project is <b>“CLASSIFIED”</b> in
+             &nbsp; during the Operational phase. The project is <b>“CLASSIFIED”</b> in
             nature.
           </p>
           <br />
