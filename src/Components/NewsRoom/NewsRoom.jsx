@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../App.js";
 import Lottie from "lottie-react";
-// import NewsLoading from "../../../public/NewsLoading.json";
+import NewsLoading from "./NewsLoading.json";
 import { div } from "framer-motion/client";
 
 const NewsRoom = () => {
@@ -69,13 +69,6 @@ const NewsRoom = () => {
   };
 
   const current = highlightData.length > 0 ? highlightData[currentSlide] : null;
-  const [loaderAnimation, setLoaderAnimation] = useState(null);
-
-  useEffect(() => {
-    fetch("/NewsLoading.json")
-      .then((res) => res.json())
-      .then((data) => setLoaderAnimation(data));
-  }, []);
 
   return (
     <>
@@ -122,9 +115,7 @@ const NewsRoom = () => {
               </div>
             ) : (
               <div className="loader-container">
-                {loaderAnimation && (
-                  <Lottie loop animationData={loaderAnimation} />
-                )}
+                <Lottie loop animationData={NewsLoading} />
               </div>
             )}
 
@@ -163,9 +154,7 @@ const NewsRoom = () => {
                 ))
               ) : (
                 <div className="loader-container">
-                  {loaderAnimation && (
-                    <Lottie loop animationData={loaderAnimation} />
-                  )}
+                  <Lottie loop animationData={NewsLoading} />
                 </div>
               )}
             </div>
