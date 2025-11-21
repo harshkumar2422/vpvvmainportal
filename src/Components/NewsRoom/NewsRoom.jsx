@@ -5,8 +5,8 @@ import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../App.js";
-import NewsLoading from "./NewsLoading.json";
 import Lottie from "lottie-react";
+import NewsLoading from "./NewsLoading.json";
 import { div } from "framer-motion/client";
 
 const NewsRoom = () => {
