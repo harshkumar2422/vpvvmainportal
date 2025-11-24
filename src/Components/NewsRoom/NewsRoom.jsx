@@ -5,9 +5,7 @@ import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../App.js";
-import Lottie from "lottie-react";
-import NewsLoading from "./NewsLoading.json";
-import { div } from "framer-motion/client";
+
 
 const NewsRoom = () => {
   const [highlightData, setHighlightData] = useState([]);
@@ -114,9 +112,8 @@ const NewsRoom = () => {
                 </div>
               </div>
             ) : (
-              <div className="loader-container">
-                <Lottie loop animationData={NewsLoading} />
-              </div>
+              
+                <p>Loading.....</p>
             )}
 
             {/* Dots */}
@@ -153,9 +150,9 @@ const NewsRoom = () => {
                   </div>
                 ))
               ) : (
-                <div className="loader-container">
-                  <Lottie loop animationData={NewsLoading} />
-                </div>
+                  <p>
+                    Loading...
+                  </p>
               )}
             </div>
           </div>
