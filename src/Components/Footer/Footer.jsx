@@ -50,7 +50,7 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <hr />
           <p>
-            <FaEnvelope className="footer-icon" /> info@vpvvtechno.com
+            <FaEnvelope className="footer-icon" /> queries@vpvvindia.com
           </p>
           <p>
             <FaPhoneAlt className="footer-icon" /> +91 82854 59458
