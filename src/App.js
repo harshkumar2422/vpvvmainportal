@@ -34,6 +34,7 @@ import LoginPage from "./Components/LoginPage/LoginPage";
 import AdminAllNews from "./Components/AdminAllNews/AdminAllNews";
 import AdminKeyHighlightsNews from "./Components/AdminKeyHighlightsNews/AdminKeyHighlightsNews";
 import AdminRegularNews from "./Components/AdminRegularNews/AdminRegularNews";
+import SignUp from "./Components/SignUp/SignUp";
 
 export const server = "https://vpvvindiabackend-com.onrender.com/api/v1";
 
@@ -112,6 +113,7 @@ const App = () => {
           />
 
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
 
