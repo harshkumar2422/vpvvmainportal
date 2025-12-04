@@ -6,13 +6,12 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../App.js";
 
-
 const NewsRoom = () => {
   const [highlightData, setHighlightData] = useState([]);
   const [regularNews, setRegularNews] = useState([]);
+  const [visibleNewsCount, setVisibleNewsCount] = useState(15); // SHOW 6 NEWS FIRST
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Fetch highlight and regular news
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -44,7 +43,6 @@ const NewsRoom = () => {
     fetchNews();
   }, []);
 
-  // Auto slide for highlights
   useEffect(() => {
     if (highlightData.length === 0) return;
     const timer = setInterval(() => {
@@ -68,6 +66,11 @@ const NewsRoom = () => {
 
   const current = highlightData.length > 0 ? highlightData[currentSlide] : null;
 
+  // LOAD MORE FUNCTION
+  const handleLoadMore = () => {
+    setVisibleNewsCount((prev) => prev + 15); // LOAD 6 MORE NEWS
+  };
+
   return (
     <>
       <Header />
@@ -78,7 +81,6 @@ const NewsRoom = () => {
               <h1>KEY INSIGHTS</h1>
             </div>
 
-            {/* Highlight Carousel */}
             {current ? (
               <div className="news-main fade-slide" key={currentSlide}>
                 <div className="news-large">
@@ -112,11 +114,9 @@ const NewsRoom = () => {
                 </div>
               </div>
             ) : (
-              
-                <p>Loading.....</p>
+              <p>Loading.....</p>
             )}
 
-            {/* Dots */}
             {highlightData.length > 1 && (
               <div className="carousel-dots">
                 {highlightData.map((_, index) => (
@@ -134,10 +134,9 @@ const NewsRoom = () => {
               <h1>RECENT NEWS</h1>
             </div>
 
-            {/* Dynamic Regular News */}
             <div className="news-small news-recent-post">
               {regularNews.length > 0 ? (
-                regularNews.map((item, i) => (
+                regularNews.slice(0, visibleNewsCount).map((item, i) => (
                   <div className="news-card" key={i}>
                     <img src={item.Image?.url} alt={item.Headline} />
                     <div className="news-card-overlay">
@@ -150,11 +149,18 @@ const NewsRoom = () => {
                   </div>
                 ))
               ) : (
-                  <p>
-                    Loading...
-                  </p>
+                <p>Loading...</p>
               )}
             </div>
+
+            {/* LOAD MORE BUTTON */}
+            {visibleNewsCount < regularNews.length && (
+              <div className="load-more-container">
+                <button className="load-more-btn" onClick={handleLoadMore}>
+                  LOAD MORE
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>

@@ -282,3 +282,25 @@
 .loader-container svg {
   transform: scale(1.6) !important;
 }
+
+.load-more-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.load-more-btn {
+  background: #ffffff;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background: #d5d5d5;
+  transform: scale(1.05);
+}
