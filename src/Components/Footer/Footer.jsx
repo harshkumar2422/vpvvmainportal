@@ -32,9 +32,8 @@ const Footer = () => {
           <p>
             <FaMapMarkerAlt className="footer-icon" />{" "}
             <strong>Headquarter Address:</strong>
-            <br />
-            VPVV Techno Construction Pvt Ltd, A Floor, Jaypee Vasant
-            Continental, Vasant Vihar, New Delhi, 110057
+            <br />A Floor, Jaypee Vasant Continental, Vasant Vihar, New Delhi,
+            110057
           </p>
           <p>
             <FaMapMarkerAlt className="footer-icon" />{" "}
