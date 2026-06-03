@@ -7,8 +7,8 @@ const OfficeTeam = () => {
   const images = [
     "https://res.cloudinary.com/dttqciolc/image/upload/v1762490338/Officeteamimg1_tpntdm.jpg",
     "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg3_qbrb9r.jpg",
-    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg2_ofsiwu.jpg",
-    "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg7_mnr0q4.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1780471822/Image11_xvhafa.jpg",
+    "https://res.cloudinary.com/dttqciolc/image/upload/v1763623867/WhatsApp_Image_2025-11-19_at_12.10.04_laeaha.jpg",
     "https://res.cloudinary.com/dttqciolc/image/upload/v1762490340/Officeteamimg9_axzrac.jpg",
     "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg6_wjs18m.jpg",
     "https://res.cloudinary.com/dttqciolc/image/upload/v1762490339/Officeteamimg8_fx1bs9.jpg",
